@@ -1,0 +1,22 @@
+# Chart of accounts notes
+
+*Last updated: {{DATE}}*
+
+Plain-English notes about how money is categorized. Not a full chart export —
+just what Claude needs to speak accurately.
+
+## Funds / classes that matter
+
+{{FUNDS}}
+
+## Common donation categories
+
+{{DONATION_CATEGORIES}}
+
+## Things that must never be mixed
+
+{{NEVER_MIX}}
+
+## Notes from setup
+
+{{COA_NOTES}}

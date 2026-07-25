@@ -1,0 +1,33 @@
+# QuickBooks Online setup
+
+*Last updated: {{DATE}}*
+
+**Rule:** QBO is the books of record. This brain does not replace it.
+
+## Companies
+
+| Nickname | Legal / QBO company name | Used for | Status |
+|----------|--------------------------|----------|--------|
+{{QBO_COMPANIES_TABLE}}
+
+## Ministry vs personal
+
+{{QBO_SEPARATION_NOTES}}
+
+## Zeffy link
+
+{{ZEFFY_QBO_LINK}}
+
+## Who has access
+
+{{QBO_ACCESS}}
+
+## How Claude should use QBO
+
+- Prefer read and explain first.
+- Never create invoices, bills, or journal entries without explicit approval.
+- When numbers disagree between Zeffy and QBO, flag both and do not invent a third total.
+
+## Open items
+
+{{QBO_OPEN_ITEMS}}

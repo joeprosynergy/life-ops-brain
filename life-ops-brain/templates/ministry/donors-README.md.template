@@ -1,0 +1,31 @@
+# Donors
+
+One markdown file per person or household when they matter enough to remember.
+Not a second accounting system — just relationship context and a light giving log.
+
+## File naming
+
+`firstname-lastname.md` (lowercase, hyphens). Households: `smith-family.md`.
+
+## Suggested shape for each donor file
+
+```markdown
+# Full Name
+
+- Email:
+- Phone:
+- First gift / how they found us:
+- Notes:
+
+## Giving log
+- YYYY-MM-DD · $amount · campaign · source (Zeffy/check/other)
+
+## Touchpoints
+- YYYY-MM-DD · thank-you drafted/sent · channel
+```
+
+## Rules
+
+- Prefer accuracy over completeness.
+- Amounts here are for context; **QBO is the books of record**.
+- Do not store payment card numbers or bank details.

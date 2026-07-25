@@ -1,0 +1,31 @@
+# Process: donation intake
+
+## Goal
+
+New gifts show up in the brain as **people + context**, while **QBO** stays the
+financial source of truth (ideally via Zeffy's native QBO sync).
+
+## Sources (in order of preference)
+
+1. Zeffy connection / API (if set up) — see `connections/zeffy-setup.md`
+2. Zeffy export (CSV) dropped into a folder the owner names
+3. Manual note from the owner ("Sarah gave $100 to building fund")
+
+## Steps
+
+1. Capture: donor name, email if known, amount, date, campaign/fund, payment source.
+2. Upsert `ministry/donors/<slug>.md` (create from the donor README pattern).
+3. Append a line to a simple giving log on that file (date · amount · campaign).
+4. Do **not** re-bookkeep the gift in markdown totals as if it were the ledger.
+5. If QBO sync is on: note "should appear in QBO via Zeffy payout" rather than entering a second bookkeeping entry.
+6. Offer a thank-you draft if appropriate (`processes/donor-reply.md`).
+
+## Weekly batch (if no live API)
+
+1. Export last 7 days from Zeffy.
+2. Say "process this donation export" and attach or point at the file.
+3. Claude updates donor notes and lists anyone who needs a thank-you.
+
+## Privacy
+
+Donor contact info stays under `ministry/`. Do not put it in family or personal folders.

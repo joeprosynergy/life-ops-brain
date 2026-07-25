@@ -1,0 +1,36 @@
+# Process: donor reply (draft only)
+
+## When to use
+
+Someone gave, asked a question, or needs a thank-you / follow-up related to
+ministry giving or donor care.
+
+## Rules
+
+1. **Draft only.** Never send email or post on Zeffy unless the owner explicitly says send.
+2. Use **ministry voice** from `context/voice.md`.
+3. Do **not** pull family details into the message.
+4. Prefer the **ministry Gmail account** (see `connections/gmail-setup.md`).
+5. If amount, campaign, or name is uncertain, ask or leave a clear placeholder.
+
+## Steps
+
+1. Identify the person, gift (if any), campaign, and channel (email vs Zeffy vs other).
+2. Check `ministry/donors/` for an existing note; create or update if useful.
+3. Draft the message in the owner's voice. Keep it human and specific.
+4. Show the draft to the owner. Offer subject line if email.
+5. On approval: create a Gmail **draft** (preferred) or hand them copy-paste text.
+6. Log a one-line note under the donor file: date, what was drafted, whether sent.
+
+## Good thank-you shape
+
+- Open with gratitude (specific if possible: campaign or timing, not flattery)
+- One sentence on what the gift supports (from `context/ministry.md`)
+- Optional soft next step only if true (receipt, event, prayer request handling)
+- Sign-off in their normal style
+
+## Avoid
+
+- Pressure language, guilt, fake urgency
+- Inventing impact numbers
+- Theology or politics the owner did not authorize

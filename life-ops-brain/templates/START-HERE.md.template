@@ -1,0 +1,51 @@
+# Start Here — {{BRAIN_LABEL}}
+
+This folder is your life ops brain. It helps Claude stay useful across
+**{{ENABLED_AREAS}}** without mixing those lives together.
+
+## How to use it
+
+1. Open this folder in the Claude app (or Claude Code).
+2. Ask in plain words: "what came in for the ministry this week?", "draft a
+   thank-you for Sarah", "what should I focus on today?"
+3. Claude reads `CLAUDE.md` first so it already knows your rules and map.
+
+If you use **Cowork**, make this folder a Project and put this in Project Instructions:
+
+> Always read CLAUDE.md in this folder first and follow everything in it. It is the source of truth for this life ops brain. Never send email or donor messages without explicit approval; draft only.
+
+## The send rule
+
+Claude **drafts**. You **send**. That keeps donor trust and avoids accidents.
+
+## Keep it sharp
+
+- When Claude is wrong, correct it and say **"remember that."**
+- When something changes (new email, new campaign, new QBO company), say
+  **"update the brain."**
+- Resume unfinished setup anytime: open `SETUP-STATUS.md` or say
+  "continue life ops setup."
+
+## What's in here
+
+| Thing | What it's for |
+|-------|----------------|
+| `CLAUDE.md` | Rules and map (Claude reads every time) |
+| `context/` | Who you are, each life area, voice |
+| `ministry/` | Donors, campaigns, ministry notes (if enabled) |
+| `business/` / `personal/` / `family/` | Area-specific work |
+| `money/` | How books are set up (QBO is the real ledger) |
+| `connections/` | Gmail, Zeffy, QBO status and how-to |
+| `processes/` | Repeatable how-tos |
+| `todo/` | Loose tasks |
+| `BRAIN.md` | Facts worth remembering |
+| `SETUP-STATUS.md` | What's done / what's next |
+
+## First things to try
+
+- "Draft a donor thank-you for [name] who gave [amount/campaign]."
+- "Triage my ministry inbox — summarize and suggest drafts, don't send."
+- "Walk me through connecting Zeffy to QuickBooks."
+- "What still needs setup?" (reads `SETUP-STATUS.md`)
+
+You never have to edit these files by hand. Just talk to Claude.

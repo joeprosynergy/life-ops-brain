@@ -1,0 +1,21 @@
+# About {{OWNER_NAME}}
+
+*Last updated: {{DATE}}*
+
+## In short
+{{OWNER_SUMMARY}}
+
+## Roles I wear
+{{ROLES}}
+
+## Where I'm based
+{{LOCATION}}
+
+## How I want Claude to work with me
+{{WORKING_PREFS}}
+
+## Always get these right
+{{ALWAYS_RIGHT}}
+
+## Boundaries
+{{BOUNDARIES}}

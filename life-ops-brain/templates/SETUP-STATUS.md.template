@@ -1,0 +1,50 @@
+# Setup status — {{BRAIN_LABEL}}
+
+Track progress. Claude updates this as you go. Say "continue life ops setup"
+to resume.
+
+**Owner:** {{OWNER_NAME}}
+**Brain path:** {{BRAIN_PATH}}
+**Last updated:** {{DATE}}
+
+## Life areas
+
+| Area | Enabled | Context filled |
+|------|---------|----------------|
+| Ministry / nonprofit | {{MINISTRY_ON}} | {{MINISTRY_CTX}} |
+| Business | {{BUSINESS_ON}} | {{BUSINESS_CTX}} |
+| Personal | {{PERSONAL_ON}} | {{PERSONAL_CTX}} |
+| Family | {{FAMILY_ON}} | {{FAMILY_CTX}} |
+
+## Phases
+
+- [{{PHASE_STRUCTURE}}] Structure (folders + harness)
+- [{{PHASE_CONTEXT}}] Context interview written into files
+- [{{PHASE_COWORK}}] Cowork Project instructions (if using Cowork)
+- [{{PHASE_GMAIL}}] Gmail accounts connected
+- [{{PHASE_ZEFFY}}] Zeffy connected / export process set
+- [{{PHASE_QBO}}] QuickBooks Online documented (+ native Zeffy sync if used)
+- [{{PHASE_WIN}}] First useful draft or checklist completed
+
+Use `x` inside the brackets when done, or leave as space. Values in the table
+above: `yes` / `no` / `partial`.
+
+## Connections (detail)
+
+See `connections/CONNECTIONS.md`.
+
+| Tool | Status | Notes |
+|------|--------|-------|
+| Gmail | {{GMAIL_STATUS}} | {{GMAIL_NOTES}} |
+| Zeffy | {{ZEFFY_STATUS}} | {{ZEFFY_NOTES}} |
+| QuickBooks Online | {{QBO_STATUS}} | {{QBO_NOTES}} |
+
+Status values: `not started` · `in progress` · `connected` · `skipped` · `blocked (...)`
+
+## Next step
+
+{{NEXT_STEP}}
+
+## Notes
+
+{{STATUS_NOTES}}

@@ -1,0 +1,10 @@
+# {{BRAIN_LABEL}} — Things to Remember
+
+Durable facts. When Claude learns something that should stick (a preference,
+a policy, a correct spelling, a boundary), it goes here. Newest at the top.
+
+*Started {{DATE}}.*
+
+## Facts
+
+{{SEED_FACTS}}

@@ -1,0 +1,28 @@
+# Gmail setup
+
+*Last updated: {{DATE}}*
+
+## Accounts (top 3)
+
+| Nickname | Email address | Life area | Status |
+|----------|---------------|-----------|--------|
+{{GMAIL_ACCOUNTS_TABLE}}
+
+## Routing rules
+
+{{GMAIL_ROUTING}}
+
+## How Claude should use mail
+
+- Search and summarize freely when the owner asks.
+- **Create drafts** for replies; send only on explicit approval.
+- Reply in the same thread when replying.
+- Use the account nickname that matches the life area.
+
+## Setup notes
+
+{{GMAIL_SETUP_NOTES}}
+
+## Later accounts (not connected yet)
+
+{{GMAIL_LATER}}

@@ -1,0 +1,24 @@
+# How {{OWNER_NAME}} Sounds
+
+*Last updated: {{DATE}}*
+
+## In a sentence
+{{VOICE_SUMMARY}}
+
+## Ministry / donor voice
+{{VOICE_MINISTRY}}
+
+## Business voice (if any)
+{{VOICE_BUSINESS}}
+
+## Personal voice
+{{VOICE_PERSONAL}}
+
+## Do
+{{VOICE_DO}}
+
+## Avoid
+{{VOICE_DONT}}
+
+## Example lines
+{{VOICE_EXAMPLE}}

@@ -1,0 +1,28 @@
+# Connections hub
+
+*Last updated: {{DATE}}*
+
+How tools link to this brain. **No passwords or API keys live in this folder.**
+Store secrets in a password manager; here we only record status and nicknames.
+
+## Status overview
+
+| Tool | Status | Primary use | Detail file |
+|------|--------|-------------|-------------|
+| Gmail | {{GMAIL_STATUS}} | Read + draft by life area | `gmail-setup.md` |
+| Zeffy | {{ZEFFY_STATUS}} | Donations intake | `zeffy-setup.md` |
+| QuickBooks Online | {{QBO_STATUS}} | Bookkeeping source of truth | `qbo-setup-guide.md` + `../money/qbo-setup.md` |
+
+## Design
+
+```
+Donors → Zeffy (intake) → QBO (books)
+                ↘
+                  this brain (people, notes, drafts, follow-ups)
+
+Gmail ↔ this brain (read + draft; human sends)
+```
+
+## Next connection step
+
+{{NEXT_CONNECTION_STEP}}

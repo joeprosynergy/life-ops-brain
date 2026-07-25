@@ -1,0 +1,29 @@
+# Process: weekly money check
+
+## Goal
+
+Confirm Zeffy (intake) and QBO (books) still tell the same story. Surface issues
+early. No automatic journal entries.
+
+## Cadence
+
+Weekly, or after a large campaign weekend.
+
+## Steps
+
+1. List Zeffy payouts / deposits for the period (export or dashboard).
+2. List matching deposits or matched transactions in QBO.
+3. Compare: missing deposits, wrong fund/campaign mapping, timing gaps.
+4. Write a short plain-English report in `ministry/notes/YYYY-MM-DD-money-check.md`.
+5. Flag anything for the owner; do not "fix" QBO without explicit approval.
+
+## Report shape
+
+- Period covered
+- What matched
+- What didn't (with amounts if known)
+- Suggested next action for the owner (one list)
+
+## Remember
+
+If numbers conflict, show both sources. Never invent a reconciling total.

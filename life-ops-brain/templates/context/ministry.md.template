@@ -1,0 +1,31 @@
+# Ministry / nonprofit
+
+*Last updated: {{DATE}}*
+
+## Organization
+**Name:** {{ORG_NAME}}
+**One line:** {{ORG_ONE_LINER}}
+
+## Who we serve
+{{WHO_WE_SERVE}}
+
+## Programs and campaigns
+{{PROGRAMS}}
+
+## How money comes in
+{{GIVING_CHANNELS}}
+
+## Scale (optional)
+{{GIVING_SCALE}}
+
+## Key people
+{{KEY_PEOPLE}}
+
+## Donor communication rules
+{{DONOR_RULES}}
+
+## Sensitive topics / never do
+{{SENSITIVE}}
+
+## Tools used here
+{{MINISTRY_TOOLS}}

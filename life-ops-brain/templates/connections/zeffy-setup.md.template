@@ -1,0 +1,38 @@
+# Zeffy setup
+
+*Last updated: {{DATE}}*
+
+## Access
+
+- Org / account: {{ZEFFY_ORG}}
+- Owner has admin access: {{ZEFFY_ADMIN}}
+- Status: {{ZEFFY_STATUS}}
+
+## Bookkeeping path (preferred)
+
+Use **Zeffy's native QuickBooks Online integration** so payouts land in QBO by
+campaign/fund. Do not rebuild the ledger in this brain.
+
+- QBO sync status: {{ZEFFY_QBO_SYNC}}
+- Notes: {{ZEFFY_QBO_NOTES}}
+
+## Brain / donor-tracking path
+
+Options (pick what is real today):
+
+1. **API** — key stored in password manager as: {{ZEFFY_API_KEY_NAME}} (never paste the key here)
+2. **Scheduled export** — CSV location or habit: {{ZEFFY_EXPORT_PATH}}
+3. **Manual** — owner pastes or describes new gifts
+
+Active method: {{ZEFFY_ACTIVE_METHOD}}
+
+## Donor messages on Zeffy
+
+Platform replies may not be automatable. Default: draft text here or in email;
+owner posts in Zeffy if needed.
+
+{{ZEFFY_MESSAGING_NOTES}}
+
+## Open items
+
+{{ZEFFY_OPEN}}

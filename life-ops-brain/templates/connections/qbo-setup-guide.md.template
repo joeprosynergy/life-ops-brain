@@ -1,0 +1,27 @@
+# QuickBooks Online — connection guide (checklist)
+
+*Last updated: {{DATE}}*
+
+Working notes while connecting. Company details live in `money/qbo-setup.md`.
+
+## Checklist
+
+- [ ] Confirm how many QBO **companies** exist (ministry vs personal vs business)
+- [ ] Ministry money only in the ministry company
+- [ ] Enable Zeffy → QBO native sync if using Zeffy
+- [ ] Map campaigns/funds during Zeffy setup
+- [ ] Decide whether Claude has a QBO connector on this computer
+- [ ] Test: Claude can name the company / see that books exist (read-only)
+- [ ] Document who else has access
+
+## Status
+
+{{QBO_GUIDE_STATUS}}
+
+## Blockers
+
+{{QBO_BLOCKERS}}
+
+## Notes
+
+{{QBO_GUIDE_NOTES}}

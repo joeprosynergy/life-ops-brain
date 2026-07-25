@@ -1,0 +1,23 @@
+# Process: email triage
+
+## Goal
+
+Summarize what needs attention across the owner's main inboxes, by life area,
+and draft replies when asked. **No sending unless explicitly approved.**
+
+## Steps
+
+1. Confirm which accounts to scan (`connections/gmail-setup.md`).
+2. Search recent unread or last N days per account.
+3. Group results: **ministry**, **business**, **personal**, **other/noise**.
+4. For each important thread: one-line summary + suggested action
+   (reply / archive / wait / hand to human).
+5. Draft replies only when asked, using the right voice and the right from-account.
+6. Never auto-archive or send during triage unless the owner opts into a specific action.
+
+## Priority hints
+
+- Donor questions and gift receipts → ministry, high care
+- Money / legal / board → flag, don't draft casually
+- Newsletters and promotions → batch or ignore
+- Family-sensitive content → do not mix into other areas' drafts
