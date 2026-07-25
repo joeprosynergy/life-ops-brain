@@ -9,6 +9,14 @@ A setup skill for Claude or Codex that builds a personal multi-area ops brain:
 
 Nothing in this package is private to any one person. It is a blank setup kit.
 
+## Start here if you have never used a terminal
+
+**Read this first:** [CODEX-FOR-BEGINNERS.md](./CODEX-FOR-BEGINNERS.md)
+
+It walks through opening Terminal, installing Codex, installing this skill, and daily use — written for someone who has never seen a command line.
+
+---
+
 ## Quick start — Claude (easiest)
 
 1. Download this repo as a ZIP (green **Code → Download ZIP**), or use the link someone sent you.
