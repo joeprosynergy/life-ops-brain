@@ -18,15 +18,28 @@ A local folder with:
 
 ## The one hard requirement
 
-Claude must be able to **write files** on their computer.
+The AI must be able to **write files** on their computer.
 
 | Surface | Fit |
 |---------|-----|
-| Claude desktop + Cowork with a folder open | Best for non-technical people |
-| Claude Code | Best if they're technical |
-| Plain claude.ai chat, no files | Interview only — they'd have to paste files by hand |
+| **ChatGPT desktop + local project** (Codex view) | Best for Manoj / Codex users. Closest to Claude Cowork. See `references/CODEX-FOR-BEGINNERS.md` Path A. |
+| Claude desktop + Cowork with a folder open | Best if they already live in Claude |
+| Codex CLI (Terminal) | Works; harder for absolute beginners. Path B in the same guide. |
+| Plain chatgpt.com chat, no desktop folder | Interview only — they would have to paste files by hand |
 
-## How to hand it over
+## How to hand it over (Codex / ChatGPT — preferred for Manoj)
+
+1. Confirm their ChatGPT plan can run **Codex** in the desktop app (Plus/Pro/etc.).  
+2. Send them:  
+   - Zip: https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip  
+   - Guide: open `CODEX-FOR-BEGINNERS.md` in that zip **or** the copy in the repo root  
+3. They follow **Path A** (ChatGPT desktop + local folder `my-life-ops`).  
+4. After first setup they must have both `CLAUDE.md` and `AGENTS.md` in the brain folder.  
+5. Connections (Gmail / Zeffy / QBO) = second session.
+
+Full click-by-click: `references/CODEX-FOR-BEGINNERS.md`.
+
+## How to hand it over (Claude Cowork)
 
 1. **Zip the skill folder**  
    Zip `.claude/skills/life-ops-brain/` (this whole folder: `SKILL.md`, `templates/`, `references/`, `HANDOFF.md`).
@@ -40,13 +53,21 @@ Claude must be able to **write files** on their computer.
 
 4. Answer questions (~15–25 minutes for structure + context). Connections can be another session.
 
-### Quickstart to paste into a handoff message
+### Quickstart to paste into a handoff message (Claude)
 
 > 1. Install the skill (open the zip in Claude → Settings → Skills).  
 > 2. Open Claude, start Cowork, pick a folder on your computer.  
 > 3. Type: **Set up my life ops brain.**  
 > 4. Answer the questions. When it asks about Gmail/Zeffy/QuickBooks, you can do those now or later.  
 > 5. If you use Cowork Projects, paste the Project Instructions line it gives you so it always reads CLAUDE.md first.
+
+### Quickstart to paste (Codex / ChatGPT desktop)
+
+> 1. Install ChatGPT desktop from https://chatgpt.com/download/ and sign in with your account.  
+> 2. Download https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip and unzip it.  
+> 3. Follow **Path A** in `CODEX-FOR-BEGINNERS.md` (install skill once, create folder `my-life-ops`, open it as a local project, type **Set up my life ops brain**).  
+> 4. After setup, make sure `AGENTS.md` exists (copy of `CLAUDE.md`).  
+> 5. Gmail / Zeffy / QuickBooks can be a second session.
 
 ## Cowork Project line (they must paste this themselves)
 
@@ -77,3 +98,9 @@ That maps cleanly to an AI Opportunity Map → setup → light retainer, without
 - Edit `templates/` to change every new brain's shape.
 - Edit `references/connection-guides.md` when Zeffy/QBO UI labels change.
 - Keep generated `CLAUDE.md` short; detail stays in `context/`.
+
+## Public share + Codex beginners
+
+- Public repo: https://github.com/joeprosynergy/life-ops-brain
+- Terminal-newbie guide: `references/CODEX-FOR-BEGINNERS.md` (also on the public repo root)
+- Zip download: https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip

@@ -9,15 +9,18 @@ A setup skill for Claude or Codex that builds a personal multi-area ops brain:
 
 Nothing in this package is private to any one person. It is a blank setup kit.
 
-## Start here if you have never used a terminal
+## Start here if you use Codex / ChatGPT (recommended)
 
 **Read this first:** [CODEX-FOR-BEGINNERS.md](./CODEX-FOR-BEGINNERS.md)
 
-It walks through opening Terminal, installing Codex, installing this skill, and daily use — written for someone who has never seen a command line.
+It covers:
 
----
+1. **Path A — ChatGPT desktop app** (local folder project = closest to Claude Cowork)
+2. **Path B — Terminal Codex** (fallback)
 
-## Quick start — Claude (easiest)
+Download the app: https://chatgpt.com/download/
+
+## Quick start — Claude Cowork
 
 1. Download this repo as a ZIP (green **Code → Download ZIP**), or use the link someone sent you.
 2. Unzip it. You want a folder named `life-ops-brain` that contains `SKILL.md`.
@@ -28,27 +31,27 @@ It walks through opening Terminal, installing Codex, installing this skill, and 
 
 If Claude asks for Project Instructions, paste the line it gives you so it always reads `CLAUDE.md` first.
 
-## Quick start — Codex
+## Quick start — Codex (short form)
 
 ```bash
 # Install the skill (user-wide)
 mkdir -p ~/.agents/skills
-# If you downloaded the repo zip, the skill is inside as life-ops-brain/
+# After downloading the repo zip, the skill is inside as life-ops-brain/
 cp -R /path/to/unzipped/life-ops-brain ~/.agents/skills/life-ops-brain
 
-# Run setup in a folder you own
-mkdir -p ~/my-ops && cd ~/my-ops
+# Prefer ChatGPT desktop: open a local project on ~/my-life-ops
+# Or terminal:
+mkdir -p ~/my-life-ops && cd ~/my-life-ops
 codex
 ```
 
 Then type `$life-ops-brain` or: **Set up my life ops brain**
 
-After setup, open the new brain folder and make Codex load the harness:
+After setup, make the harness load every time:
 
 ```bash
 cd ~/path/to/your-new-brain
 cp CLAUDE.md AGENTS.md
-codex
 ```
 
 ## What you get

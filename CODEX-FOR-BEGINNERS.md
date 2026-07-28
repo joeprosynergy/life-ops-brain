@@ -1,270 +1,165 @@
-# Codex for complete beginners
+# Life ops brain — bulletproof setup (Codex / ChatGPT)
 
-This guide assumes you have **never used a terminal** before.  
-Go step by step. Do not skip ahead. If something looks different on your screen, stop and reply to Joe with a screenshot.
+**For Manoj (or anyone new to terminals).**  
+Do **one path only**. Prefer Path A. Stop if something fails and send Joe a screenshot + the step number.
 
-You will:
+| Path | What it is | Who should use it |
+|------|------------|-------------------|
+| **A — ChatGPT desktop (recommended)** | App with folders on your computer. Closest to Claude Cowork. | Almost everyone. No terminal required for daily use. |
+| **B — Terminal Codex** | Black/white window where you type commands. | If Path A is broken or you already use Terminal. |
 
-1. Open a small program called Terminal (Mac) or Command Prompt (Windows)
-2. Install Codex (if it is not already installed)
-3. Download the life-ops-brain package
-4. Put it where Codex can find it
-5. Run the setup
-6. Use it day to day
+**Links you will need**
 
----
+- Package (zip): https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip  
+- Project page: https://github.com/joeprosynergy/life-ops-brain  
+- ChatGPT desktop download: https://chatgpt.com/download/
 
-## Words you will see
+**Hard rules**
 
-| Word | What it means |
-|------|----------------|
-| **Terminal** | A plain window where you type commands and press Enter. No mouse menus. |
-| **Command** | A short line of text you type, then press **Enter** / **Return**. |
-| **Folder** | Same as a directory. A place that holds files. |
-| **Codex** | OpenAI’s coding assistant that runs in the terminal. |
-| **Cursor** | The blinking line that shows where your typing goes. |
-
-**Rules that save you:**
-
-- Type commands **exactly** as written (spaces matter).
-- Press **Enter** after each command.
-- If you see an error, **copy the full error text** and send it to Joe. Do not guess.
-- Never paste passwords into random websites. For this guide you only use Terminal + your browser + Codex login.
+1. Use **your own** ChatGPT / OpenAI login (not Joe’s).  
+2. Never put passwords or API keys into brain files.  
+3. Codex / ChatGPT should **draft** donor emails. **You** send them.  
+4. Type commands **exactly** (spaces matter). Press **Enter** after each command.  
+5. If you see an error: copy the full text → email joe@plyntr.com with the step number.
 
 ---
 
-## Step 0 — What computer are you on?
+# Path A — ChatGPT desktop app (recommended, Cowork-like)
 
-- **Mac** (Apple laptop/desktop) → use the **Mac** steps.
-- **Windows** PC → use the **Windows** steps.
-- If you are not sure: look at the logo key on the keyboard (⌘ Command = Mac, Windows logo = Windows).
+This is the same idea as Claude Cowork: a **local folder** on your machine that the AI can read and write, plus a **skill** that walks setup.
 
----
+## A0 — What you need
 
-## Step 1 — Open the terminal
+- Mac or Windows computer  
+- A ChatGPT account that can use **Codex** in the desktop app (Plus / Pro / Team / Enterprise / Edu typically; Free may have limits).  
+  If the app says Codex is not available, tell Joe your plan name.  
+- About 30–45 minutes for first setup  
 
-### Mac
+## A1 — Install the ChatGPT desktop app
 
-1. Click the **magnifying glass** (Spotlight) in the top-right of the screen.  
-   Or press **Command (⌘) + Space**.
-2. Type: `Terminal`
-3. Press **Enter** when **Terminal** appears.
-4. A white or black window opens. That is Terminal. Leave it open.
+1. Open https://chatgpt.com/download/  
+2. Download for **Mac** or **Windows**.  
+3. Install and open the app.  
+4. Sign in with **your** ChatGPT account.  
 
-### Windows
+**Note (July 2026):** The old “Codex app” merged into the **ChatGPT desktop app**.  
+If you still have an old Codex app, update it; it becomes ChatGPT desktop.  
+“ChatGPT Classic” is the older chat-only app — for this guide you want the **new** desktop app that has **ChatGPT / Work / Codex** in the top-left menu.
 
-1. Click the **Start** button (Windows logo).
-2. Type: `cmd`
-3. Click **Command Prompt**.
-4. A black or blue window opens. Leave it open.
+## A2 — Download and unzip the life-ops package
 
----
+1. Open this link:  
+   https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip  
+2. Wait for download.  
+3. Unzip:  
+   - **Mac:** double-click the zip  
+   - **Windows:** right-click → **Extract All**  
+4. You should get a folder like `life-ops-brain-main`.  
+5. Open it. Inside is a folder named **`life-ops-brain`** that contains **`SKILL.md`**.  
+   That inner `life-ops-brain` folder is the skill. Do not lose it.
 
-## Step 2 — Install Codex (skip if you already use Codex)
+## A3 — Create an empty folder for *your* brain
 
-Still in Terminal / Command Prompt.
-
-### Mac
-
-Copy this **whole line**, paste into Terminal, press **Enter**:
-
-```bash
-brew install --cask codex
-```
-
-- If it says `brew: command not found`, install Homebrew first from https://brew.sh (follow only their one install line), then run the line above again.
-- If `brew` works but you prefer another method, this also works:
-
-```bash
-npm install -g @openai/codex
-```
-
-(Only if you already have Node/npm. If you do not, stick with `brew`.)
-
-### Windows
-
-Easiest path for most people:
-
-1. Open https://github.com/openai/codex/releases in your browser.
-2. Or install via npm if you already have Node.js:
-
-```text
-npm install -g @openai/codex
-```
-
-If you get stuck on install, message Joe before continuing.
-
-### Check that Codex is installed
-
-In the same window, type:
-
-```bash
-codex --version
-```
-
-Press **Enter**.
-
-- If you see a version number (like `0.something`), you are good.
-- If it says `command not found` / `not recognized`, Codex is not installed yet. Stop and tell Joe.
-
----
-
-## Step 3 — Log in to Codex (first time only)
-
-Type:
-
-```bash
-codex login
-```
-
-Press **Enter**.
-
-- A browser window may open. Sign in with the ChatGPT / OpenAI account you use for Codex.
-- When it says you are logged in, return to the terminal window.
-- You only do this once (or when it expires).
-
----
-
-## Step 4 — Download the life-ops-brain package
-
-### Easiest way (browser)
-
-1. Open this link in your browser:  
-   **https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip**
-2. Wait for the download to finish.
-3. Find the file (usually in **Downloads**). Name is something like `life-ops-brain-main.zip`.
-4. **Unzip it**  
-   - **Mac:** double-click the zip. A folder `life-ops-brain-main` appears.  
-   - **Windows:** right-click the zip → **Extract All** → Extract.
-5. Open that folder. Inside you should see another folder named **`life-ops-brain`**.  
-   That inner folder is the one that matters (it contains a file called `SKILL.md`).
-
-### Find the full path of that inner folder
-
-You need the “address” of the `life-ops-brain` folder for the next step.
+This is where your real files will live (ministry, business, personal). Separate from the skill package.
 
 **Mac**
 
-1. Open **Finder**.
-2. Go into `life-ops-brain-main`, then click once on the **`life-ops-brain`** folder (do not open it yet).
-3. Right-click (or Control-click) → **Get Info**.
-4. Look at **Where:** — that is the parent path.  
-   Or: open the folder, then right-click the title bar icon → hold **Option** → **Copy “life-ops-brain” as Pathname**.
-5. Write it down. Example shape (yours will differ):  
-   `/Users/YourName/Downloads/life-ops-brain-main/life-ops-brain`
+1. Open **Finder**.  
+2. Go to your home folder (or Documents).  
+3. **File → New Folder**.  
+4. Name it exactly: `my-life-ops`  
 
 **Windows**
 
-1. Open the extracted folder in File Explorer.
-2. Click in the address bar at the top.
-3. Copy the path (Control+C). Example shape:  
-   `C:\Users\YourName\Downloads\life-ops-brain-main\life-ops-brain`
+1. Open **File Explorer**.  
+2. Go to Documents (or your user folder).  
+3. Right-click → **New → Folder**.  
+4. Name it exactly: `my-life-ops`  
 
----
+Leave this folder empty for now.
 
-## Step 5 — Install the skill so Codex can see it
+## A4 — Install the skill (one time)
 
-Go back to Terminal / Command Prompt.
+Skills live in a special place so Codex can find them.
 
-### Mac
+### Mac (easiest: Terminal once)
 
-Type this **first** line, then Enter:
+1. Spotlight (**⌘ + Space**) → type `Terminal` → Enter.  
+2. Paste this **whole block** and press Enter (it creates the skills folder and copies the skill if the zip is in Downloads):
 
 ```bash
 mkdir -p ~/.agents/skills
+cp -R "$HOME/Downloads/life-ops-brain-main/life-ops-brain" "$HOME/.agents/skills/life-ops-brain"
+ls "$HOME/.agents/skills/life-ops-brain/SKILL.md"
 ```
 
-That creates a home for skills. (If it already exists, nothing bad happens.)
-
-Then install the skill. **Replace the path** with *your* real path from Step 4:
+3. You should see a line ending in `SKILL.md`.  
+4. If you see “No such file”, the zip is not in Downloads. Fix the path:  
+   - Finder → go into your unzipped folder → click `life-ops-brain` → right-click title bar icon → hold **Option** → **Copy “life-ops-brain” as Pathname**  
+   - Then run:
 
 ```bash
-cp -R "/Users/YourName/Downloads/life-ops-brain-main/life-ops-brain" ~/.agents/skills/life-ops-brain
+mkdir -p ~/.agents/skills
+cp -R "PASTE_YOUR_PATH_HERE" "$HOME/.agents/skills/life-ops-brain"
+ls "$HOME/.agents/skills/life-ops-brain/SKILL.md"
 ```
 
-Example if your Mac username is `manoj` and the zip landed in Downloads:
+### Windows (Command Prompt once)
 
-```bash
-cp -R "/Users/manoj/Downloads/life-ops-brain-main/life-ops-brain" ~/.agents/skills/life-ops-brain
-```
-
-### Windows (Command Prompt)
+1. Start → type `cmd` → **Command Prompt**.  
+2. Paste:
 
 ```text
 mkdir %USERPROFILE%\.agents\skills
-```
-
-Then (fix the path with yours):
-
-```text
 xcopy /E /I "%USERPROFILE%\Downloads\life-ops-brain-main\life-ops-brain" "%USERPROFILE%\.agents\skills\life-ops-brain"
-```
-
-### Check it landed
-
-**Mac:**
-
-```bash
-ls ~/.agents/skills/life-ops-brain/SKILL.md
-```
-
-You should see a path printed ending in `SKILL.md`.
-
-**Windows:**
-
-```text
 dir %USERPROFILE%\.agents\skills\life-ops-brain\SKILL.md
 ```
 
-You should see `SKILL.md` listed.
-
-If not found, the copy path was wrong. Fix the path and try Step 5 again.
-
----
-
-## Step 6 — Make a folder for your new brain
-
-This is an **empty** folder on *your* computer where Codex will build your life ops brain.
-
-### Mac
-
-```bash
-mkdir -p ~/my-life-ops
-cd ~/my-life-ops
-```
-
-### Windows
+3. You should see `SKILL.md` listed.  
+4. If not found, open the unzipped folder in Explorer, click the address bar, copy the path to the **inner** `life-ops-brain` folder, and run:
 
 ```text
-mkdir %USERPROFILE%\my-life-ops
-cd %USERPROFILE%\my-life-ops
+mkdir %USERPROFILE%\.agents\skills
+xcopy /E /I "PASTE_YOUR_PATH_HERE" "%USERPROFILE%\.agents\skills\life-ops-brain"
 ```
 
-You are now “inside” that folder. Leave the terminal window open.
+**Check (either OS):** You must have a file at:
 
----
+- Mac: `~/.agents/skills/life-ops-brain/SKILL.md`  
+- Windows: `C:\Users\YOURNAME\.agents\skills\life-ops-brain\SKILL.md`
 
-## Step 7 — Start Codex and run setup
+## A5 — Open a local project (this is the Cowork-like part)
 
-Type:
+1. Open the **ChatGPT desktop app**.  
+2. Top-left menu: choose **Codex** (not only Chat).  
+   - If you only see Chat/Work, still try **Projects** and “open local folder” / “local project”.  
+3. Create or open a **local project** that points at `my-life-ops`:  
+   - Look for **Projects** → **New project** / **Add folder** / **Open folder**.  
+   - Select your **`my-life-ops`** folder.  
+   - If asked for a **primary** folder, choose `my-life-ops`.  
+4. Approve file access when the Mac/Windows permission popup appears.  
+5. Start a **new chat** inside that project.
 
-```bash
-codex
-```
+**What “Cowork-like” means here**
 
-Press **Enter**.
+| Claude Cowork | ChatGPT desktop (Path A) |
+|---------------|---------------------------|
+| Open a folder | Local project → attach `my-life-ops` |
+| Skill runs setup | Skill `$life-ops-brain` or “Set up my life ops brain” |
+| Project instructions | After setup: `AGENTS.md` (copy of `CLAUDE.md`) auto-loads |
+| Files stay on your Mac | Files stay on your computer |
 
-- Codex may take a few seconds to start.
-- You may need to approve access the first time. Choose the safe / recommended options if asked.
-- When you can type to Codex, type **exactly**:
+Web ChatGPT alone **cannot** write a full brain to your disk. You need the **desktop app** for local folders.
+
+## A6 — Run setup
+
+In the chat box, type **exactly one** of these:
 
 ```text
 $life-ops-brain
 ```
 
-Press **Enter**.
-
-**If `$life-ops-brain` does nothing**, try typing this instead:
+or
 
 ```text
 Set up my life ops brain
@@ -272,68 +167,50 @@ Set up my life ops brain
 
 Then:
 
-1. Answer Codex’s questions one at a time (name, ministry, emails, etc.).
-2. Let it create folders and files. Say yes when it asks to write files in this folder.
-3. You can pause anytime. Later say: `Continue life ops setup`
+1. Answer questions one at a time (name, ministry, businesses, emails, etc.).  
+2. When it asks to create/write files in `my-life-ops`, **allow** / **yes**.  
+3. You can stop anytime. Later say: `Continue life ops setup`  
+4. Connections (Gmail / Zeffy / QuickBooks) can wait for a second session.
 
-When it finishes the first pass, it will tell you the brain is ready.
+## A7 — Lock in the rules file (do not skip)
 
----
+After the first setup pass finishes, your folder should contain `CLAUDE.md` (and `START-HERE.md`, `SETUP-STATUS.md`, etc.).
 
-## Step 8 — Make the brain load every time (important)
+Codex loads **`AGENTS.md`** as standing rules. Make a copy:
 
-After setup, your brain is a folder (for example `~/my-life-ops` or a subfolder inside it that Codex named).
-
-1. **Quit Codex** for a moment if you need a clean start (type `/exit` or quit as the app shows you).
-2. In Terminal, go into the brain folder. If everything was created *in* `my-life-ops`, this is enough:
-
-**Mac:**
+### Mac Terminal
 
 ```bash
-cd ~/my-life-ops
+cd ~/Documents/my-life-ops 2>/dev/null || cd ~/my-life-ops
 cp CLAUDE.md AGENTS.md
-codex
+ls CLAUDE.md AGENTS.md
 ```
 
-**Windows:**
+(If your folder is only in Documents, use that path. If `CLAUDE.md` is missing, list files with `ls` and `cd` into the subfolder Codex created.)
+
+### Windows Command Prompt
+
+```text
+cd %USERPROFILE%\Documents\my-life-ops
+copy CLAUDE.md AGENTS.md
+dir CLAUDE.md AGENTS.md
+```
+
+If the folder is under your user home instead of Documents:
 
 ```text
 cd %USERPROFILE%\my-life-ops
 copy CLAUDE.md AGENTS.md
-codex
 ```
 
-- If `CLAUDE.md` is not found, the brain may be in a subfolder. List files:
+Restart the chat (new chat in the same local project). Codex should now always respect draft-only and ministry/family walls.
 
-**Mac:** `ls`  
-**Windows:** `dir`
+## A8 — Every day (Path A)
 
-Then `cd` into the subfolder that contains `CLAUDE.md`, and run the `cp` / `copy` line there.
-
-`AGENTS.md` is how Codex remembers your rules (draft only, walls between ministry/family, etc.).
-
----
-
-## Step 9 — How you use it every day
-
-1. Open Terminal (Step 1).
-2. Go to your brain folder:
-
-**Mac:**
-
-```bash
-cd ~/my-life-ops
-codex
-```
-
-**Windows:**
-
-```text
-cd %USERPROFILE%\my-life-ops
-codex
-```
-
-3. Ask in plain English. Examples:
+1. Open ChatGPT desktop.  
+2. Open your **my-life-ops** local project.  
+3. New chat (or continue an old one).  
+4. Talk in plain English, for example:
 
 ```text
 What should I focus on this week?
@@ -344,63 +221,88 @@ Draft a donor thank-you for Sarah who gave to the building fund. Do not send.
 ```
 
 ```text
-Walk me through connecting Zeffy to QuickBooks. One step at a time.
+Continue life ops setup. Connect Gmail, then Zeffy, then QuickBooks. One step at a time.
 ```
-
-```text
-Continue life ops setup
-```
-
-**Important:** Codex should **draft** emails and donor messages. **You** send them.  
-If it ever offers to send, say **no** unless you mean it.
 
 ---
 
-## Connecting Gmail, Zeffy, and QuickBooks
+# Path B — Terminal only (fallback)
 
-Do this **after** the folder and interview exist.
+Use this if the desktop app will not open local folders, or you prefer CLI.
 
-Say to Codex:
+## B1 — Open Terminal / Command Prompt
 
-```text
-Continue life ops setup. Help me connect Gmail, then Zeffy, then QuickBooks. One tool at a time. I am new to this.
-```
+- **Mac:** ⌘ + Space → `Terminal` → Enter  
+- **Windows:** Start → `cmd` → Command Prompt  
 
-- Gmail connection depends on what Codex can access on your machine. If a connector is not available, Codex will still help you with pasted emails and written drafts.
-- Zeffy → QuickBooks is mostly done in the **browser** (Zeffy’s own settings). Codex will walk you through clicks; you do them.
-- Never put API keys or passwords into the brain files. Password manager only.
+## B2 — Install Codex CLI
 
----
-
-## If something goes wrong
-
-| What you see | What to try |
-|--------------|-------------|
-| `command not found: codex` | Step 2 install again; close Terminal and open a new window |
-| `$life-ops-brain` does nothing | Type `Set up my life ops brain` instead |
-| Skill not found | Repeat Step 5; confirm `SKILL.md` exists with the check command |
-| Login / auth errors | Run `codex login` again |
-| Afraid you broke something | Stop. Nothing here deletes your photos or bank account. Message Joe with the error text |
-
----
-
-## Cheat sheet (after you have done this once)
-
-**Mac — every day:**
+### Mac (preferred)
 
 ```bash
+brew install --cask codex
+```
+
+If `brew: command not found`, install Homebrew from https://brew.sh (one install line), then run the brew line again.
+
+### Alternative (Mac/Windows with Node already installed)
+
+```bash
+npm install -g @openai/codex
+```
+
+### Check
+
+```bash
+codex --version
+```
+
+You need a version number. If `command not found`, install failed — stop and message Joe.
+
+## B3 — Login (your account)
+
+```bash
+codex login
+```
+
+Sign in in the browser with **your** ChatGPT account.  
+If login fails on a “Go” or free plan, tell Joe your plan name; Codex may need Plus or higher.
+
+## B4 — Install the skill
+
+Same as **A2 + A4** (download zip, then copy into `~/.agents/skills/life-ops-brain`).
+
+**Mac check:**
+
+```bash
+ls ~/.agents/skills/life-ops-brain/SKILL.md
+```
+
+**Windows check:**
+
+```text
+dir %USERPROFILE%\.agents\skills\life-ops-brain\SKILL.md
+```
+
+## B5 — Create brain folder and start
+
+**Mac**
+
+```bash
+mkdir -p ~/my-life-ops
 cd ~/my-life-ops
 codex
 ```
 
-**Windows — every day:**
+**Windows**
 
 ```text
+mkdir %USERPROFILE%\my-life-ops
 cd %USERPROFILE%\my-life-ops
 codex
 ```
 
-**Run the setup skill again / resume:**
+Then type:
 
 ```text
 $life-ops-brain
@@ -409,15 +311,111 @@ $life-ops-brain
 or
 
 ```text
-Continue life ops setup
+Set up my life ops brain
+```
+
+## B6 — AGENTS.md (same as A7)
+
+**Mac**
+
+```bash
+cd ~/my-life-ops
+cp CLAUDE.md AGENTS.md
+codex
+```
+
+**Windows**
+
+```text
+cd %USERPROFILE%\my-life-ops
+copy CLAUDE.md AGENTS.md
+codex
+```
+
+## B7 — Every day (Path B)
+
+**Mac**
+
+```bash
+cd ~/my-life-ops
+codex
+```
+
+**Windows**
+
+```text
+cd %USERPROFILE%\my-life-ops
+codex
 ```
 
 ---
 
-## Links
+# Connecting Gmail, Zeffy, QuickBooks
 
-- Download package: https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip  
-- Project page: https://github.com/joeprosynergy/life-ops-brain  
-- This beginner guide (same repo): open `CODEX-FOR-BEGINNERS.md` after you unzip  
+Do this **after** the interview and folder exist.
 
-Questions → reply to Joe at joe@plyntr.com with the step number and the exact error message.
+Say:
+
+```text
+Continue life ops setup. Help me connect Gmail, then Zeffy, then QuickBooks. One tool at a time. I am new to this.
+```
+
+| Tool | What happens |
+|------|----------------|
+| **Gmail** | Desktop may offer connectors; if not, you paste emails and get drafts. |
+| **Zeffy** | Mostly browser clicks; native Zeffy → QuickBooks sync is preferred for books. |
+| **QuickBooks** | Books of record. Brain holds people and drafts, not a second ledger. |
+
+Never store API keys in the brain folder. Password manager only.
+
+---
+
+# If something goes wrong
+
+| Problem | Fix |
+|---------|-----|
+| Codex not in app / greyed out | Plan may not include Codex. Message Joe with plan name (Plus, Pro, etc.). |
+| Login failed / wrong account | Sign out, use **your** account only. |
+| `$life-ops-brain` does nothing | Type `Set up my life ops brain`. Restart app. Re-check skill path (A4). |
+| Skill not found | Repeat A4; confirm `SKILL.md` exists. Restart ChatGPT desktop / Terminal. |
+| `command not found: codex` | Path B install again; close and reopen Terminal. |
+| No `CLAUDE.md` after setup | You may be in the wrong folder. List files; open the folder that has `START-HERE.md`. |
+| Afraid you broke something | Stop. This does not touch bank accounts. Send Joe the error text. |
+| “Go plan” / shared login issues | Each person needs their **own** paid plan that includes Codex. |
+
+---
+
+# Cheat sheet
+
+**Desktop daily (Path A)**  
+ChatGPT app → Codex → open `my-life-ops` project → chat.
+
+**Terminal daily (Path B)**
+
+```bash
+cd ~/my-life-ops && codex
+```
+
+**Resume setup**
+
+```text
+Continue life ops setup
+```
+
+**Re-run skill**
+
+```text
+$life-ops-brain
+```
+
+---
+
+# For Joe (handoff)
+
+1. Prefer Path A for Manoj (desktop = Cowork analogue).  
+2. Confirm his ChatGPT plan can run **Codex** on desktop before he starts.  
+3. Package: https://github.com/joeprosynergy/life-ops-brain  
+4. After first session, verify he has both `CLAUDE.md` and `AGENTS.md` in `my-life-ops`.  
+5. Second session: Gmail → Zeffy → QBO only.
+
+Questions → joe@plyntr.com with step number + exact error.
