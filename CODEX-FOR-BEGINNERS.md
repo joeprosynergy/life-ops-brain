@@ -382,6 +382,116 @@ Never store API keys in the brain folder. Password manager only.
 | No `CLAUDE.md` after setup | You may be in the wrong folder. List files; open the folder that has `START-HERE.md`. |
 | Afraid you broke something | Stop. This does not touch bank accounts. Send Joe the error text. |
 | “Go plan” / shared login issues | Each person needs their **own** paid plan that includes Codex. |
+| **Apple “Hide My Email” login fails in Terminal** | See **Apple Hide My Email / Sign in with Apple** section below. Very common. |
+
+---
+
+# Apple Hide My Email / Sign in with Apple (common CLI failure)
+
+If ChatGPT was created with **Sign in with Apple** and **Hide My Email** (a random address like `xxxx@privaterelay.appleid.com`), **browser chat can work** while **`codex login` in Terminal fails**. That is a known pain point: the CLI needs a browser login to hand a token back to Terminal, and Apple’s relay + password flow often breaks that handoff.
+
+Try these **in order**. Stop when one works.
+
+## Fix 1 — Prefer ChatGPT desktop (skip Terminal login)
+
+You do **not** need Terminal login if desktop works.
+
+1. Install/open ChatGPT desktop: https://chatgpt.com/download/  
+2. Sign in with **Continue with Apple** the same way you use chatgpt.com.  
+3. Use **Path A** (local project on `my-life-ops`).  
+4. Only come back to Terminal if you specifically need the CLI.
+
+Many people get fully set up this way and never run `codex login`.
+
+## Fix 2 — Device code login (best Terminal fix)
+
+This avoids the “browser → localhost callback” step that often fails with Apple.
+
+1. On the computer, open **https://chatgpt.com** and sign in (Apple is fine).  
+2. Open **Settings → Security** (or **Settings → Account / Data controls** if labels differ).  
+3. Turn on **Device code login** / **Sign in with device code** if you see it.  
+4. In Terminal:
+
+```bash
+codex logout
+codex login --device-auth
+```
+
+5. Terminal will show a **URL** and a **one-time code**.  
+6. Open the URL on **this same Mac** (Safari or Chrome), sign in with Apple if asked, enter the code.  
+7. Wait until Terminal says login succeeded. Check:
+
+```bash
+codex login status
+```
+
+If device code is missing from settings, your plan or region may not show it yet — go to Fix 3.
+
+## Fix 3 — Give the OpenAI account a real email + password
+
+Hide My Email is for privacy; OpenAI’s developer tools often need a **normal** login path.
+
+1. Sign in at https://chatgpt.com with Apple.  
+2. Open **Settings → Account** (or profile → **Personalization / Account**).  
+3. Look for **Email**, **Add email**, or **Password**.  
+4. Add a **real email you can open** (Gmail, etc.) and verify it if asked.  
+5. Set an **OpenAI password** (this is separate from your Apple password).  
+6. Sign out of chatgpt.com completely.  
+7. Sign back in with **email + OpenAI password** (not “Continue with Apple”).  
+8. In Terminal:
+
+```bash
+codex logout
+codex login
+```
+
+9. In the browser window that opens, choose **email/password**, not Apple.
+
+### If you cannot find “add email”
+
+Apple controls the Hide My Email address:
+
+1. On iPhone/Mac: **Settings → [your name] → Sign in with Apple** → find **OpenAI / ChatGPT**.  
+2. See whether it says **Hide My Email** or **Share My Email**.  
+3. If possible, switch to **Share My Email** with a real address, or stop using Apple for this app and use email login after adding one in ChatGPT settings.  
+4. Do **not** delete the Hide My Email address until you can still open the ChatGPT account another way (real email/password). Deleting the relay first can lock you out.
+
+## Fix 4 — Login on desktop, then use CLI with shared auth cache
+
+Sometimes desktop can sign in when Terminal’s browser flow fails. After desktop is signed into **Codex**, CLI often reuses the same local credentials.
+
+1. Open ChatGPT desktop → top-left **Codex** → sign in successfully.  
+2. Quit Terminal completely, open a new Terminal window.  
+3. Run:
+
+```bash
+codex login status
+```
+
+4. If it already shows logged in, you are done.  
+5. If not, try:
+
+```bash
+codex login --device-auth
+```
+
+again (Fix 2).
+
+## Fix 5 — Last resort: new ChatGPT account with a normal email
+
+Only if the Apple-only account cannot be fixed:
+
+1. Create a **new** ChatGPT account with a normal email + password (no Hide My Email).  
+2. Move any Plus/Pro subscription to that account if needed.  
+3. Use that account for Codex and life ops.
+
+Do this only after Fix 3 fails, so you do not lose paid access.
+
+## What not to do
+
+- Do not paste passwords into Terminal as random commands.  
+- Do not share Joe’s ChatGPT login.  
+- Do not use a Platform **API key** unless you understand it bills **separately** from ChatGPT Plus (pay-per-use). Prefer subscription ChatGPT login for Codex.
 
 ---
 
