@@ -1,7 +1,7 @@
 # Life ops brain — bulletproof setup (Codex / ChatGPT)
 
-**For Manoj (or anyone new to terminals).**  
-Do **one path only**. Prefer Path A. Stop if something fails and send Joe a screenshot + the step number.
+**For anyone new to terminals.**  
+Do **one path only**. Prefer Path A. Stop if something fails and send the person who set this up for you a screenshot + the step number.
 
 | Path | What it is | Who should use it |
 |------|------------|-------------------|
@@ -16,7 +16,7 @@ Do **one path only**. Prefer Path A. Stop if something fails and send Joe a scre
 
 **Hard rules**
 
-1. Use **your own** ChatGPT / OpenAI login (not Joe’s).  
+1. Use **your own** ChatGPT / OpenAI login (not someone else’s).  
 2. Never put passwords or API keys into brain files.  
 3. Codex / ChatGPT should **draft** donor emails. **You** send them.  
 4. Type commands **exactly** (spaces matter). Press **Enter** after each command.  
@@ -32,7 +32,7 @@ This is the same idea as Claude Cowork: a **local folder** on your machine that 
 
 - Mac or Windows computer  
 - A ChatGPT account that can use **Codex** in the desktop app (Plus / Pro / Team / Enterprise / Edu typically; Free may have limits).  
-  If the app says Codex is not available, tell Joe your plan name.  
+  If the app says Codex is not available, tell the person who set this up for you your plan name.  
 - About 30–45 minutes for first setup  
 
 ## A1 — Install the ChatGPT desktop app
@@ -257,7 +257,7 @@ npm install -g @openai/codex
 codex --version
 ```
 
-You need a version number. If `command not found`, install failed — stop and message Joe.
+You need a version number. If `command not found`, install failed — stop and message the person who set this up for you.
 
 ## B3 — Login (your account)
 
@@ -266,7 +266,7 @@ codex login
 ```
 
 Sign in in the browser with **your** ChatGPT account.  
-If login fails on a “Go” or free plan, tell Joe your plan name; Codex may need Plus or higher.
+If login fails on a “Go” or free plan, tell the person who set this up for you your plan name; Codex may need Plus or higher.
 
 ## B4 — Install the skill
 
@@ -374,13 +374,13 @@ Never store API keys in the brain folder. Password manager only.
 
 | Problem | Fix |
 |---------|-----|
-| Codex not in app / greyed out | Plan may not include Codex. Message Joe with plan name (Plus, Pro, etc.). |
+| Codex not in app / greyed out | Plan may not include Codex. Message the person who set this up for you with your plan name (Plus, Pro, etc.). |
 | Login failed / wrong account | Sign out, use **your** account only. |
 | `$life-ops-brain` does nothing | Type `Set up my life ops brain`. Restart app. Re-check skill path (A4). |
 | Skill not found | Repeat A4; confirm `SKILL.md` exists. Restart ChatGPT desktop / Terminal. |
 | `command not found: codex` | Path B install again; close and reopen Terminal. |
 | No `CLAUDE.md` after setup | You may be in the wrong folder. List files; open the folder that has `START-HERE.md`. |
-| Afraid you broke something | Stop. This does not touch bank accounts. Send Joe the error text. |
+| Afraid you broke something | Stop. This does not touch bank accounts. Send the person who set this up for you the error text. |
 | “Go plan” / shared login issues | Each person needs their **own** paid plan that includes Codex. |
 | **Apple “Hide My Email” login fails in Terminal** | See **Apple Hide My Email / Sign in with Apple** section below. Very common. |
 
@@ -490,7 +490,7 @@ Do this only after Fix 3 fails, so you do not lose paid access.
 ## What not to do
 
 - Do not paste passwords into Terminal as random commands.  
-- Do not share Joe’s ChatGPT login.  
+- Do not share anyone else’s ChatGPT login.  
 - Do not use a Platform **API key** unless you understand it bills **separately** from ChatGPT Plus (pay-per-use). Prefer subscription ChatGPT login for Codex.
 
 ---
@@ -520,9 +520,9 @@ $life-ops-brain
 
 ---
 
-# For Joe (handoff)
+# For the person handing this out
 
-1. Prefer Path A for Manoj (desktop = Cowork analogue).  
+1. Prefer Path A (desktop = Cowork analogue).  
 2. Confirm his ChatGPT plan can run **Codex** on desktop before he starts.  
 3. Package: https://github.com/joeprosynergy/life-ops-brain  
 4. After first session, verify he has both `CLAUDE.md` and `AGENTS.md` in `my-life-ops`.  
