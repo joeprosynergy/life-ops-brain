@@ -1,69 +1,37 @@
-# Life Ops Brain
+# Life Ops Brain setup skill
 
-A setup skill for Claude or Codex that builds a personal multi-area ops brain:
+> **The brain itself has moved to a template: https://github.com/Plyntr-LLC/life-ops-brain-template**
+>
+> That template is now the Life Ops Brain. It has safety guards built in (sends wait for the word "send", changes wait for "approve", passwords and keys stay out of reach) for Claude Code, Codex, Grok and Antigravity. Start there.
 
-- Ministry / nonprofit, business, personal, and family (with hard walls)
-- Guided interview into context files
-- Connection walkthroughs for Gmail (up to 3 accounts), Zeffy, and QuickBooks Online
-- Draft-only donor and email replies by default
+This repo keeps the **setup skill** (`life-ops-brain/`). The skill gets the template onto your computer, runs its setup, and can add optional areas for a ministry or nonprofit (donors, campaigns, Zeffy, QuickBooks), a business, or family.
 
-Nothing in this package is private to any one person. It is a blank setup kit.
+## Quickest start
 
-## Start here if you use Codex / ChatGPT (recommended)
-
-**Read this first:** [CODEX-FOR-BEGINNERS.md](./CODEX-FOR-BEGINNERS.md)
-
-It covers:
-
-1. **Path A — ChatGPT desktop app** (local folder project = closest to Claude Cowork)
-2. **Path B — Terminal Codex** (fallback)
-
-Download the app: https://chatgpt.com/download/
-
-## Quick start — Claude Cowork
-
-1. Download this repo as a ZIP (green **Code → Download ZIP**), or use the link someone sent you.
-2. Unzip it. You want a folder named `life-ops-brain` that contains `SKILL.md`.
-3. In the **Claude** desktop app: **Settings → Skills** (or Capabilities) → add / upload that `life-ops-brain` folder.
-4. Start **Cowork**, open any empty folder on *your* computer.
-5. Type: **Set up my life ops brain**
-6. Answer the questions. Connections (Gmail / Zeffy / QBO) can be a second session.
-
-If Claude asks for Project Instructions, paste the line it gives you so it always reads `CLAUDE.md` first.
-
-## Quick start — Codex (short form)
+**Terminal (Claude Code, Codex, Grok, Antigravity):**
 
 ```bash
-# Install the skill (user-wide)
-mkdir -p ~/.agents/skills
-# After downloading the repo zip, the skill is inside as life-ops-brain/
-cp -R /path/to/unzipped/life-ops-brain ~/.agents/skills/life-ops-brain
-
-# Prefer ChatGPT desktop: open a local project on ~/my-life-ops
-# Or terminal:
-mkdir -p ~/my-life-ops && cd ~/my-life-ops
-codex
+git clone https://github.com/Plyntr-LLC/life-ops-brain-template.git my-brain
+cd my-brain && node setup.cjs
 ```
 
-Then type `$life-ops-brain` or: **Set up my life ops brain**
+Then open the folder in your AI tool and say **/start**.
 
-After setup, make the harness load every time:
+**Claude or ChatGPT desktop app:** download the [template zip](https://github.com/Plyntr-LLC/life-ops-brain-template/archive/refs/heads/main.zip), unzip it, open the folder in the app and say **/start**.
 
-```bash
-cd ~/path/to/your-new-brain
-cp CLAUDE.md AGENTS.md
-```
+## Want the add-on areas too?
 
-## What you get
+Install this skill: download [this repo's zip](https://github.com/joeprosynergy/life-ops-brain/archive/refs/heads/main.zip), unzip it, and add the `life-ops-brain` folder as a skill (Claude desktop: Settings, Skills. Codex: copy it to `~/.agents/skills/`). Then say **/life-ops-brain** or "set up my life ops brain".
 
-A local folder on **your** machine with structure, context, processes (donor thank-yous, donation intake, email triage, weekly money check), and connection checklists. QuickBooks stays the books of record; the brain holds people, notes, and drafts.
+ChatGPT desktop, click by click: [CODEX-FOR-BEGINNERS.md](./CODEX-FOR-BEGINNERS.md).
 
 ## Privacy
 
+- Your brain stays on your computer. Nothing is uploaded.
 - Never put passwords or API keys in the brain folder.
-- Family content stays under `family/` and is not used for donor messages unless you ask.
-- External messages are **draft only** until you say send.
+- Family notes stay under `personal/family/` and are not used for donor or client writing unless you ask.
+- Outgoing messages are drafts until you say **send**.
 
 ## Support
 
-If something fails, tell the person who shared this with you which step broke (install, interview, or connections).
+If something fails, tell the person who shared this with you which step broke.
